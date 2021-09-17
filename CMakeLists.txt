@@ -62,9 +62,9 @@ file(GLOB CL_SOURCES  ${CMAKE_CURRENT_SOURCE_DIR}/src/kernels/*.cl)
 file(GLOB CL_HEADERS  ${CMAKE_CURRENT_SOURCE_DIR}/src/kernels/*.h)
 
 find_package(PythonLibs 3)
-find_package(Boost COMPONENTS python3 numpy3)
+find_package(Boost COMPONENTS python numpy)
 
-if(PYTHONLIBS_FOUND AND Boost_NUMPY3_FOUND AND Boost_PYTHON3_FOUND)
+if(PYTHONLIBS_FOUND AND Boost_NUMPY_FOUND AND Boost_PYTHON_FOUND)
     set(BUILD_PYDLPRIM TRUE)
 else()
     set(BUILD_PYDLPRIM FALSE)
